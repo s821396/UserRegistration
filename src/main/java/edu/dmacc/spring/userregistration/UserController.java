@@ -36,8 +36,9 @@ public class UserController {
 			return modelAndView;
 	}
 	
-	@RequestMapping(value = "/viewall")
+	@RequestMapping(value = "/viewAll")
 		public ModelAndView viewAll() {
+		System.out.println("In view User");
 		ModelAndView modelAndView = new ModelAndView();
 		List<User> allUsers = dao.getAllUsers();
 		modelAndView.setViewName("viewAllUsers");
